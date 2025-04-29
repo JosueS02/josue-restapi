@@ -27,8 +27,8 @@ jobs:
         PORT=8080
         UPLOAD_PATH=./uploads
         MYSQL_HOST=35.226.9.113
-        MYSQL_USER=josue
-        MYSQL_PASSWORD=123
+        MYSQL_USER=angel
+        MYSQL_PASSWORD=Takitol1986.
         MYSQL_DATABASE=f1
         MYSQL_PORT=3306
         EOF

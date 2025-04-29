@@ -1,14 +1,15 @@
-FROM debian:bullseye
-RUN apt-get update
+FROM node:20
 
-RUN apt-get install -y curl make g++
+WORKDIR /app
 
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
-RUN apt-get install -y nodejs
+COPY package*.json ./
 
-ADD . /
 RUN npm install
+
+COPY . .
+
+COPY .env .env
 
 EXPOSE 8080
 
-CMD  ["node", "server.js"]
+CMD ["npm", "start"]
